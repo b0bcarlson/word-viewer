@@ -1,7 +1,7 @@
 <?php
 include("config.php");
 file_put_contents("cache.html","Cache is being created, please refresh in one minute");
-$n = intval($_GET["length"]);
+$n = intval(getopt('f:')['f']);
 if ($n != 1 && $n != 2 && $n !=3) {
         die();
 }
